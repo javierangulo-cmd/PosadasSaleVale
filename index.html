@@ -54,6 +54,7 @@
     </style>
 </head>
 <body class="bg-salevale-softBg text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-salevale-green selection:text-white">
+
     <!-- HEADER Y NAVBAR EJECUTIVA -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b-4 border-salevale-green transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,6 +233,14 @@
                 <!-- Grid de Tarjetas de Sucursales -->
                 <div id="branchesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
                     <!-- Javascript inserta las sucursales -->
+                </div>
+
+                <!-- Nota Informativa a Pie del Directorio -->
+                <div class="p-3.5 bg-amber-50/70 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-info text-amber-600 mt-0.5 text-sm flex-shrink-0"></i>
+                    <p class="leading-relaxed">
+                        <strong>Nota:</strong> Si tu sucursal no está en esta lista, no está considerada para realizar Posada. Cualquier duda, favor de revisarlo con el área de Marketing.
+                    </p>
                 </div>
             </div>
         </section>
@@ -416,7 +425,8 @@
                             <h4>Factura contra pago (Depósitos Anticipados)</h4>
                         </div>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Si la factura solo se emite al momento de pagar por políticas del proveedor, se gestionará el pago ya sea al proveedor o colaborador, a inicios de mes para que se pueda comprobar dicho depósito dentro del mismo mes.</p>
+                            Si la factura solo se emite al momento de pagar por políticas del proveedor, se gestionará el pago ya sea al proveedor o colaborador, a inicios de mes para que se pueda comprobar dicho depósito dentro del mismo mes.
+                        </p>
                     </div>
                 </div>
 
@@ -722,7 +732,7 @@
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: PREGUNTAS FRECUENTES -->
+        <!-- SECCIÓN PREGUNTAS FRECUENTES -->
         <section id="faq" class="scroll-mt-24 space-y-6">
             <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
                 <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
@@ -821,7 +831,11 @@
                         <ul class="text-xs text-slate-700 space-y-2.5">
                             <li class="flex items-start gap-2.5 p-2.5 bg-red-50/50 rounded-xl border border-red-100">
                                 <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
-                                <span>Documentos ilegibles, alterados o con información incompleta.</span>
+                                <span>Documentos ilegibles, alterados, con información incompleta o con <strong>vigencia mayor a 2 meses</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 p-2.5 bg-red-50/50 rounded-xl border border-red-100">
+                                <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                <span>Comprobante de Domicilio que no esté a nombre del Proveedor y no compartan el <strong>Contrato de arrendamiento o Carta de Justificación</strong>.</span>
                             </li>
                             <li class="flex items-start gap-2.5 p-2.5 bg-red-50/50 rounded-xl border border-red-100">
                                 <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
@@ -835,7 +849,7 @@
                     </div>
                 </div>
 
-                <!-- Pregunta 5 (Full width o 2 cols) -->
+                <!-- Pregunta 5 -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all space-y-4 md:col-span-2">
                     <div class="flex items-center gap-3">
                         <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">5</span>
