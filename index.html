@@ -54,7 +54,6 @@
     </style>
 </head>
 <body class="bg-salevale-softBg text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-salevale-green selection:text-white">
-
     <!-- HEADER Y NAVBAR EJECUTIVA -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b-4 border-salevale-green transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,6 +93,7 @@
                     <a href="#posadas-pequenas-micro" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Pequeñas & Micro</a>
                     <a href="#procesos" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Procesos</a>
                     <a href="#documentacion" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Documentación</a>
+                    <a href="#faq" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Preguntas Frecuentes</a>
                     <a href="#contactos" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Contactos</a>
                 </nav>
 
@@ -120,6 +120,7 @@
             <a href="#posadas-pequenas-micro" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">POSADAS PEQUEÑAS Y MICRO</a>
             <a href="#procesos" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">DESCRIPCIÓN DE PROCESOS</a>
             <a href="#documentacion" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">DOCUMENTACIÓN</a>
+            <a href="#faq" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">PREGUNTAS FRECUENTES</a>
             <a href="#contactos" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">CONTACTOS</a>
             <a href="https://docs.google.com/spreadsheets/d/1UcTe14-6oGz66NK-qnZrZpyKRjX40Z7gskYxy6B5Z2g/edit?usp=drive_link" target="_blank" class="block py-2 text-salevale-green font-bold">🎅🏻 ABRIR TABLERO GOOGLE SHEETS 🪅</a>
         </div>
@@ -415,8 +416,7 @@
                             <h4>Factura contra pago (Depósitos Anticipados)</h4>
                         </div>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Si la factura solo se emite al momento de pagar por políticas del proveedor, se gestionará el pago ya sea al proveedor o colaborador, a inicios de mes para que se pueda comprobar dicho depósito dentro del mismo mes.
-                        </p>
+                            Si la factura solo se emite al momento de pagar por políticas del proveedor, se gestionará el pago ya sea al proveedor o colaborador, a inicios de mes para que se pueda comprobar dicho depósito dentro del mismo mes.</p>
                     </div>
                 </div>
 
@@ -717,6 +717,235 @@
                             <span>Términos y condiciones de pago y cancelaciones</span>
                         </li>
                     </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: PREGUNTAS FRECUENTES -->
+        <section id="faq" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
+                <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-circle-question text-salevale-lightGreen"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-salevale-blue">PREGUNTAS FRECUENTES</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider">Resolución de Dudas Administrativas, Tiempos de Respuesta y Facturación</p>
+                </div>
+            </div>
+
+            <!-- Grid de Preguntas Frecuentes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Pregunta 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">1</span>
+                            <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Cuánto tiempo toma el proceso de alta de un proveedor?</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            El tiempo de respuesta depende del monto del presupuesto asignado:
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-700">
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                                <span class="font-bold text-salevale-blue block">• Presupuestos superiores a $30,000 MXN:</span>
+                                <p>Requieren la validación previa de Grupo Coppel. Si toda la documentación presentada es correcta, el proceso toma <strong>hasta 7 días hábiles</strong>.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                                <span class="font-bold text-salevale-green block">• Presupuestos menores a $30,000 MXN:</span>
+                                <p>Se gestionan mediante la <strong>norma 14-B</strong>. El registro pasa directamente al área de Contabilidad en SaleVale y el trámite toma <strong>hasta 3 días hábiles</strong>.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                                <span class="font-bold text-slate-800 block">• Depósitos a Colaboradores:</span>
+                                <p>No es necesario enviar información del proveedor. El depósito se realiza directamente al Gerente de Sucursal, quien ya se encuentra dado de alta en nuestro sistema contable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">2</span>
+                            <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Qué es el Certificado de Cumplimiento de Grupo Coppel (GC)?</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Es un documento obligatorio para el alta en Contabilidad y la elaboración del contrato formal en proyectos con presupuestos mayores a <strong>$30,000 MXN</strong>.
+                        </p>
+                        <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200 text-xs text-slate-700 space-y-2">
+                            <p class="leading-relaxed">
+                                Para obtenerlo, el área de <strong>Control de Proveedores de Grupo Coppel</strong> revisa la documentación compartida.
+                            </p>
+                            <p class="font-semibold text-salevale-blue">
+                                <i class="fa-solid fa-clock mr-1 text-salevale-green"></i> Si la información es correcta y completa, el certificado se emite en un lapso de <strong>7 días hábiles</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-slate-100 text-[11px] font-bold text-slate-600 text-center">
+                        Requisito indispensable para formalización contractual > $30,000 MXN
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">3</span>
+                            <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Pueden solicitar documentación adicional durante la validación?</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            <strong>Sí.</strong> Dependiendo del giro o tipo de proveedor, el área de Control de Proveedores puede requerir información complementaria.
+                        </p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Asimismo, se podrá solicitar el llenado de <strong>cuestionarios de debida diligencia</strong> y la visualización de un <strong>video de capacitación</strong>. Las instrucciones y enlaces llegarán a los correos registrados del contacto operativo y del representante legal.
+                        </p>
+                        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 font-medium">
+                            <i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i>
+                            <strong>Nota:</strong> El proceso de alta no finalizará hasta que estos requisitos completen su registro.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">4</span>
+                            <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Cuáles son los motivos de rechazo más frecuentes en el proceso de validación?</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Las causas principales de rechazo o pausado del trámite son:
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2.5">
+                            <li class="flex items-start gap-2.5 p-2.5 bg-red-50/50 rounded-xl border border-red-100">
+                                <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                <span>Documentos ilegibles, alterados o con información incompleta.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 p-2.5 bg-red-50/50 rounded-xl border border-red-100">
+                                <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                <span>Que el proveedor se encuentre registrado en las listas del SAT (<strong>artículo 69-B del CFF</strong>).</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 p-2.5 bg-red-50/50 rounded-xl border border-red-100">
+                                <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                <span>Cuestionarios de debida diligencia o videos de capacitación pendientes de completar.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 (Full width o 2 cols) -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">5</span>
+                        <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Cómo se gestionan los anticipos a proveedores?</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Para emitir cualquier tipo de pago (anticipo, finiquito o pago único), es <strong>indispensable que el proveedor ya esté dado de alta en el sistema contable</strong>. Una vez confirmado el alta, la solicitud se gestiona bajo uno de los siguientes esquemas:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                            <div class="flex items-center gap-2 font-bold text-salevale-green text-sm">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <h4>Pago Contra Factura (Opción recomendada)</h4>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed">
+                                El proveedor emite y comparte la factura a nombre de <strong>SAVAPRE</strong> por el monto a depositar antes de liberar el pago. Ofrece mayor control administrativo y reduce riesgos de comprobación.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                            <div class="flex items-center gap-2 font-bold text-salevale-blue text-sm">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                                <h4>Facturación Contra Depósito</h4>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed">
+                                Si por políticas internas el proveedor solo factura tras recibir el pago, se gestiona un depósito anticipado. El usuario indicará la fecha de depósito y el comprobante para que el proveedor emita la factura a la brevedad.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-red-50 border-l-4 border-red-500 text-xs text-red-900 leading-relaxed">
+                        <strong>IMPORTANTE:</strong> Las gestiones bajo el esquema de Facturación Contra Depósito deben solicitarse dentro de los <strong>primeros 15 días del mes</strong>. La comprobación fiscal debe quedar registrada <strong>dentro del mismo mes calendario</strong>; de lo contrario, se solicitará la devolución del recurso.
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">6</span>
+                            <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Cuánto tarda en reflejarse el depósito a un proveedor o colaborador?</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            El pago se procesa en un lapso de <strong>3 a 4 días hábiles</strong>, sujeto a la agilidad del flujo de autorizaciones institucionales.
+                        </p>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                            <span class="text-xs font-bold text-salevale-blue flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-days text-salevale-green"></i>
+                                Días programados para emisión de depósitos en SaleVale:
+                            </span>
+                            <div class="flex gap-2 pt-1">
+                                <span class="px-3 py-1 bg-white border border-slate-300 rounded-lg text-xs font-bold text-salevale-blue shadow-sm">Lunes</span>
+                                <span class="px-3 py-1 bg-white border border-slate-300 rounded-lg text-xs font-bold text-salevale-blue shadow-sm">Miércoles</span>
+                                <span class="px-3 py-1 bg-white border border-slate-300 rounded-lg text-xs font-bold text-salevale-blue shadow-sm">Viernes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">7</span>
+                            <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">Si el recurso para un evento se deposita a un colaborador, ¿debo enviar los documentos del proveedor o los míos?</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            <strong>No es necesario</strong> compartir los documentos del proveedor ni los del Gerente de Sucursal (sus datos ya existen en el sistema contable).
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-blue-50/50 border border-blue-200 text-xs text-slate-700 space-y-2">
+                            <span class="font-bold text-salevale-blue block">Sin embargo, sí es obligatorio presentar:</span>
+                            <ul class="space-y-1.5 pl-2">
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-salevale-green"></i>
+                                    <span>La <strong>cotización formal</strong> del proveedor.</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-salevale-green"></i>
+                                    <span>El <strong>Visto Bueno (VOBO)</strong> por parte del área de Mercadotecnia.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:border-salevale-blue transition-all space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-salevale-blue text-white font-extrabold text-xs flex items-center justify-center shadow-sm">8</span>
+                        <h3 class="font-extrabold text-salevale-blue text-sm leading-snug">¿Bajo qué concepto fiscal se debe emitir la factura?</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        La factura debe detallar un concepto enfocado explícitamente en la realización del evento. Se aceptan redacciones tales como:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center font-bold text-xs text-salevale-blue flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-receipt text-salevale-green"></i>
+                            <span>"Consumo de Alimentos para Posada SaleVale"</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center font-bold text-xs text-salevale-blue flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-utensils text-salevale-green"></i>
+                            <span>"Banquete para Evento"</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center font-bold text-xs text-salevale-blue flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-salevale-green"></i>
+                            <span>"Desarrollo de Evento"</span>
+                        </div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-slate-100 text-xs text-slate-700 flex items-start gap-2.5">
+                        <i class="fa-solid fa-circle-info text-salevale-blue mt-0.5"></i>
+                        <span><strong>En caso de anticipos:</strong> No es obligatorio especificar la palabra "Anticipo" en la descripción del concepto, pero si el proveedor decide incluirla, es totalmente válido ante el área contable.</span>
+                    </div>
                 </div>
 
             </div>
