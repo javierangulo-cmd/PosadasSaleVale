@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Posadas Salevale 2026 - Guía Informativa Gerencial</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        salevale: {
+                            blue: '#3b439b',
+                            green: '#6bb837',
+                            darkBlue: '#282d6b',
+                            lightGreen: '#7ec945',
+                            softBg: '#f4f6fa',
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 9999px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 9999px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        .timeline-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-salevale-softBg text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-salevale-green selection:text-white">
+
+    <!-- HEADER Y NAVBAR EJECUTIVA -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b-4 border-salevale-green transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Identidad Visual / Logo Oficial Salevale -->
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <!-- Isotipo Smartphone Salevale -->
+                    <div class="w-9 h-14 bg-salevale-blue rounded-lg p-1 flex flex-col justify-between items-center shadow-md relative group-hover:scale-105 transition-transform">
+                        <div class="w-1.5 h-0.5 bg-white/50 rounded-full mb-0.5"></div>
+                        <div class="w-full flex-1 bg-salevale-green rounded flex items-center justify-center relative overflow-hidden">
+                            <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                <span class="text-salevale-blue text-xs font-black leading-none">$</span>
+                            </div>
+                        </div>
+                        <div class="w-2 h-2 rounded-full border border-white/60 mt-0.5"></div>
+                    </div>
+
+                    <!-- Logotipo Texto con Lema -->
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-baseline">
+                            <span class="text-2xl sm:text-3xl font-extrabold tracking-tight text-salevale-blue">Sale<span class="text-salevale-green">vale</span></span>
+                            <span class="text-[10px] text-salevale-blue font-bold ml-0.5">®</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 -mt-1">
+                            <div class="h-0.5 w-14 bg-salevale-green rounded-full"></div>
+                            <span class="text-[11px] font-bold text-salevale-blue tracking-wide">lo vale<span class="text-[9px]">®</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Navegación de Escritorio -->
+                <nav class="hidden lg:flex items-center space-x-1 text-xs font-bold uppercase tracking-wider text-slate-600">
+                    <a href="#inicio" class="px-3 py-2 rounded-lg text-salevale-blue hover:text-salevale-green hover:bg-slate-50 transition-colors">Inicio</a>
+                    <a href="#posadas-macro" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Macro</a>
+                    <a href="#posadas-medianas" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Medianas</a>
+                    <a href="#posadas-pequenas-micro" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Pequeñas & Micro</a>
+                    <a href="#procesos" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Procesos</a>
+                    <a href="#documentacion" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Documentación</a>
+                    <a href="#contactos" class="px-3 py-2 rounded-lg hover:text-salevale-blue hover:bg-slate-50 transition-colors">Contactos</a>
+                </nav>
+
+                <!-- Botón de Enlace al Tablero Oficial -->
+                <div class="hidden sm:flex items-center">
+                    <a href="https://docs.google.com/spreadsheets/d/1UcTe14-6oGz66NK-qnZrZpyKRjX40Z7gskYxy6B5Z2g/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 bg-salevale-blue hover:bg-salevale-darkBlue text-white text-xs font-bold rounded-lg shadow-sm hover:shadow transition-all">
+                        <i class="fa-solid fa-table"></i>
+                        <span>🎅🏻 Tablero MKT 2026</span>
+                    </a>
+                </div>
+
+                <!-- Botón Móvil -->
+                <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 rounded-lg text-salevale-blue hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-2 text-sm font-semibold shadow-xl">
+            <a href="#inicio" onclick="closeMobileMenu()" class="block py-2 text-salevale-blue hover:text-salevale-green">INICIO</a>
+            <a href="#posadas-macro" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">POSADAS MACRO</a>
+            <a href="#posadas-medianas" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">POSADAS MEDIANAS</a>
+            <a href="#posadas-pequenas-micro" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">POSADAS PEQUEÑAS Y MICRO</a>
+            <a href="#procesos" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">DESCRIPCIÓN DE PROCESOS</a>
+            <a href="#documentacion" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">DOCUMENTACIÓN</a>
+            <a href="#contactos" onclick="closeMobileMenu()" class="block py-2 text-slate-700 hover:text-salevale-blue">CONTACTOS</a>
+            <a href="https://docs.google.com/spreadsheets/d/1UcTe14-6oGz66NK-qnZrZpyKRjX40Z7gskYxy6B5Z2g/edit?usp=drive_link" target="_blank" class="block py-2 text-salevale-green font-bold">🎅🏻 ABRIR TABLERO GOOGLE SHEETS 🪅</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <!-- 1. SECCIÓN INICIO -->
+        <section id="inicio" class="scroll-mt-24 space-y-8">
+            <!-- Hero Ejecutivo -->
+            <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-salevale-darkBlue via-salevale-blue to-indigo-950 text-white p-6 sm:p-10 shadow-xl border border-blue-900/40">
+                <div class="absolute -right-8 -bottom-10 opacity-10 pointer-events-none text-white">
+                    <i class="fa-solid fa-tree text-[200px]"></i>
+                </div>
+                <div class="relative z-10 max-w-3xl space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-salevale-green/20 border border-salevale-green/40 text-salevale-lightGreen text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-bullhorn"></i> Portal Oficial Gerencial 2026
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                        Posadas Salevale 2026
+                    </h1>
+                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                        Actualmente se está trabajando para el desarrollo de Posadas en diferentes sucursales en los meses de <span class="text-amber-300 font-bold">Noviembre y Diciembre</span>. Estas se dividen en 4 Categorías, con sus respectivos presupuestos y características avaladas por el área de Mercadotecnia.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="https://docs.google.com/spreadsheets/d/1UcTe14-6oGz66NK-qnZrZpyKRjX40Z7gskYxy6B5Z2g/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-salevale-green hover:bg-salevale-lightGreen text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-green-900/30 transition-transform active:scale-95">
+                            <span>🎅🏻 POSADAS🪅 GDE 2026</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                        <a href="#procesos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 transition-all">
+                            <i class="fa-solid fa-diagram-project text-salevale-lightGreen"></i>
+                            <span>Ver Flujo de Procesos</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Consideraciones Obligatorias -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border-l-8 border-salevale-blue space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-salevale-blue/10 text-salevale-blue flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-extrabold text-salevale-blue">Consideraciones Clave para Gerentes</h2>
+                        <p class="text-xs text-slate-500">Lineamientos dictados para el presupuesto, contratación y logística de la posada.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                        <i class="fa-solid fa-sack-dollar text-salevale-green text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-salevale-blue block mb-0.5 font-bold">Presupuesto por Categoría:</strong>
+                            Cada una de las sucursales por su categoría tiene un presupuesto establecido por el área de Mercadotecnia, la cual pueden ver en el tablero oficial de seguimiento: <a href="https://docs.google.com/spreadsheets/d/1UcTe14-6oGz66NK-qnZrZpyKRjX40Z7gskYxy6B5Z2g/edit?usp=drive_link" target="_blank" class="text-salevale-blue font-bold underline hover:text-salevale-green">🎅🏻 POSADAS🪅 GDE 2026</a>.
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                        <i class="fa-solid fa-comments text-salevale-blue text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-salevale-blue block mb-0.5 font-bold">Evaluación con Mercadotecnia:</strong>
+                            Las características del desarrollo, amenidades y dinámicas se deben revisar y evaluar obligatoriamente con el área de Mercadotecnia antes de cualquier contratación.
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                        <i class="fa-solid fa-hand-holding-dollar text-salevale-green text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-salevale-blue block mb-0.5 font-bold">Aprobaciones Presupuestales:</strong>
+                            Cualquier tema relacionado con el tema de los presupuestos se debe revisar de igual manera con el área de Mercadotecnia.
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                        <i class="fa-solid fa-file-invoice-dollar text-salevale-blue text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-salevale-blue block mb-0.5 font-bold">Variación de Pagos/Depósitos:</strong>
+                            Dependiendo de cada una de las Categorías, el proceso de alta, pagos y/o depósitos varía de acuerdo al tipo de evento.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Directorio Interactivo de las 59 Sucursales -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-salevale-blue">Directorio General de Sucursales (59 Sedes)</h3>
+                        <p class="text-xs text-slate-500">Verifica la clasificación correspondiente a tu sucursal para la temporada 2026.</p>
+                    </div>
+                    <!-- Buscador -->
+                    <div class="relative w-full md:w-72">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                        <input type="text" id="sucursalSearchInput" onkeyup="filterBranches()" placeholder="Buscar tu sucursal..." class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-salevale-blue">
+                    </div>
+                </div>
+
+                <!-- Tabs de Categoría -->
+                <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
+                    <button onclick="setCategoryFilter('ALL')" class="category-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-salevale-blue text-white shadow-sm" data-category="ALL">Todas (59)</button>
+                    <button onclick="setCategoryFilter('Macro')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Macro">Macro (7)</button>
+                    <button onclick="setCategoryFilter('Mediana')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Mediana">Medianas (18)</button>
+                    <button onclick="setCategoryFilter('Pequeña')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Pequeña">Pequeñas (22)</button>
+                    <button onclick="setCategoryFilter('Micro')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Micro">Micro (12)</button>
+                </div>
+
+                <!-- Grid de Tarjetas de Sucursales -->
+                <div id="branchesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+                    <!-- Javascript inserta las sucursales -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN POSADAS MACRO -->
+        <section id="posadas-macro" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
+                <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-crown text-amber-300"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-salevale-blue">POSADAS MACRO</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider">Eventos de Gran Escala (+200 Asistentes) · Sedes Centrales</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                <p class="text-sm text-slate-700 leading-relaxed">
+                    Para eventos Macro, el cual conlleva más servicios y montos más elevados, para la contratación y formalización de los servicios en el desarrollo del evento, se deben considerar obligatoriamente los siguientes aspectos:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Aspecto 1 -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-b from-blue-50/60 to-white border border-blue-200 flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="w-8 h-8 rounded-lg bg-salevale-blue text-white flex items-center justify-center font-bold text-xs mb-3">1</div>
+                            <h3 class="font-bold text-salevale-blue text-sm">Validación del Evento con Marketing</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Validación previa obligatoria del lugar, amenidad y presupuesto por parte del Área de Marketing, vía correo electrónico a:
+                            </p>
+                        </div>
+                        <a href="mailto:perla.uriarte@salevale.com" class="p-2.5 rounded-lg bg-white border border-blue-200 text-xs font-semibold text-salevale-blue flex items-center gap-2 hover:border-salevale-green transition-colors">
+                            <i class="fa-solid fa-envelope text-salevale-green"></i>
+                            <span>perla.uriarte@salevale.com</span>
+                        </a>
+                    </div>
+
+                    <!-- Aspecto 2 -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-b from-green-50/60 to-white border border-green-200 flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="w-8 h-8 rounded-lg bg-salevale-green text-white flex items-center justify-center font-bold text-xs mb-3">2</div>
+                            <h3 class="font-bold text-salevale-blue text-sm">Montos Mayores a $30,000</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Si son montos por encima de los $30,000 pasarán por el proceso de <strong>Certificación de SaleVale / Grupo Coppel</strong>, y posteriormente Alta en Contabilidad y Formalización de Servicio:
+                            </p>
+                            <ul class="text-xs text-slate-700 list-disc pl-4 mt-2 space-y-1">
+                                <li><strong>Menores a $50,000.00:</strong> Serán Contratos Simples (Firma Autógrafa).</li>
+                                <li><strong>Mayores a $50,000.00:</strong> Contrato Marco de Grupo Coppel (Firma Digital).</li>
+                            </ul>
+                        </div>
+                        <span class="text-[11px] font-bold text-salevale-green bg-green-100/60 px-2 py-1 rounded text-center">Firma Autógrafa o Digital Coppel</span>
+                    </div>
+
+                    <!-- Aspecto 3 -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200 flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="w-8 h-8 rounded-lg bg-slate-700 text-white flex items-center justify-center font-bold text-xs mb-3">3</div>
+                            <h3 class="font-bold text-salevale-blue text-sm">Montos Menores a $30,000</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                En caso de que sean pagos menores a $30,000, se gestionará el <strong>pago Directo a proveedor a través de la Decisión 14-B</strong> o a través del Gerente de Sucursal.
+                            </p>
+                        </div>
+                        <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-1 rounded text-center">Trámite Simplificado Decisión 14-B</span>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-3">
+                    <i class="fa-solid fa-circle-info text-amber-600 text-base mt-0.5"></i>
+                    <div>
+                        <strong>Sedes Macro Registradas:</strong> Celaya, Villahermosa, Culiacán, Uruapan, Minatitlán, Torreón y Los Mochis.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN POSADAS MEDIANAS -->
+        <section id="posadas-medianas" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
+                <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-champagne-glasses text-salevale-lightGreen"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-salevale-blue">POSADAS MEDIANAS</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider">Aforo Estándar (~80 Asistentes) · Presupuesto de hasta $32,000 (IVA Incluido)</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                <p class="text-sm text-slate-700">
+                    Para los Eventos Medianos de <strong>hasta $32,000.00 (con IVA incluido)</strong>, se estarán considerando 3 opciones para su contratación y pago:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Opción 1 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-white hover:border-salevale-blue transition-all space-y-3">
+                        <span class="text-[10px] font-extrabold text-salevale-blue bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Opción A</span>
+                        <h3 class="font-bold text-salevale-blue text-sm">Montos arriba de $30,000.00</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Se debe realizar la <strong>Validación de Proveedor con Grupo Coppel</strong>, suministrando los documentos (ir a la sección de Documentación) para su proceso de validación. Con el Certificado emitido, se solicitará el alta en la contabilidad de <strong>SAVAPRE</strong> y se gestionará el Contrato Simple del Servicio, el cual va a ir respaldado por la Cotización.
+                        </p>
+                    </div>
+
+                    <!-- Opción 2 -->
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-white hover:border-salevale-blue transition-all space-y-3">
+                        <span class="text-[10px] font-extrabold text-salevale-green bg-green-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Opción B</span>
+                        <h3 class="font-bold text-salevale-blue text-sm">Montos menores a $30,000.00</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Los proveedores solo deberán compartir <strong>Constancia de Situación Fiscal (CSF)</strong>, <strong>Comprobante de Domicilio</strong> (a nombre del proveedor) y <strong>Carátula Bancaria</strong> (a nombre del proveedor). Estos documentos deben no ser mayor a dos meses a partir de esta fecha y deben ser lo más legibles de preferencia en PDF, de lo contrario se rechazará la solicitud. Con dichos documentos se darán de alta en Contabilidad de SAVAPRE para cualquier pago.
+                        </p>
+                    </div>
+
+                    <!-- Opción 3 -->
+                    <div class="p-5 rounded-2xl border border-amber-200 bg-amber-50/30 hover:border-amber-400 transition-all space-y-3">
+                        <span class="text-[10px] font-extrabold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full uppercase tracking-wider">Opción C</span>
+                        <h3 class="font-bold text-amber-900 text-sm">Excepciones o Casos Especiales</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            En caso de que por algún tema el proveedor no comparta dichos documentos y sea el único lugar en donde se pueda realizar el evento, se gestionará un <strong>Depósito al Colaborador</strong> para que realice el pago del evento.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Facturación Obligatoria -->
+                <div class="rounded-2xl bg-salevale-darkBlue text-white p-6 space-y-4">
+                    <h3 class="font-bold text-salevale-lightGreen text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-file-invoice-dollar text-base"></i>
+                        <span>En cualquiera de los casos, hay que considerar la facturación:</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="p-3.5 bg-white/10 rounded-xl">
+                            <strong class="text-white block mb-1 text-sm">• Factura previa al depósito:</strong>
+                            <p class="text-slate-300 leading-relaxed">Para agilizar los temas administrativos, lo ideal es que se genere una factura con el monto total del servicio y realizar el pago en una sola exhibición.</p>
+                        </div>
+                        <div class="p-3.5 bg-white/10 rounded-xl">
+                            <strong class="text-white block mb-1 text-sm">• Factura contra pago (Depósitos Anticipados):</strong>
+                            <p class="text-slate-300 leading-relaxed">Si la factura solo se emite al momento de pagar por políticas del proveedor, se gestionará el pago ya sea al proveedor o colaborador, a inicios de mes para que se pueda comprobar dicho depósito dentro del mismo mes.</p>
+                        </div>
+                    </div>
+                    <div class="pt-2 border-t border-white/20 text-center">
+                        <span class="text-xs font-extrabold text-amber-300 uppercase tracking-wider">
+                            NOTA OBLIGATORIA: En ambos casos la factura debe venir a nombre de SAVAPRE SA DE CV.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN POSADAS PEQUEÑAS Y MICRO -->
+        <section id="posadas-pequenas-micro" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
+                <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-store text-salevale-lightGreen"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-salevale-blue">POSADAS PEQUEÑAS Y MICRO</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider">Esquemas Ágiles · Pequeñas ($16,000) · Micro ($6,000)</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 p-5 rounded-2xl border border-green-200">
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Por temas de agilidad y considerando que los montos son de <strong>$16,000 para Pequeñas</strong> y <strong>$6,000 para Micro</strong>, el proceso que se realizará es el siguiente:
+                        <br><br>
+                        Con la <strong>Validación de Mercadotecnia</strong>, se realizará el depósito directamente al <strong>Gerente de Sucursal</strong>. Para esto, hay que revisar con el proveedor los siguientes esquemas:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+                        <div class="flex items-center gap-2 text-salevale-green font-bold text-sm">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h4>Factura previa al depósito</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Con la finalidad de agilizar los temas administrativos, lo ideal es que se genere una factura con el monto total del servicio y realice el pago en una sola exhibición.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+                        <div class="flex items-center gap-2 text-salevale-blue font-bold text-sm">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <h4>Factura contra pago (Depósitos Anticipados)</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Si la factura solo se emite al momento de pagar por políticas del proveedor, se gestionará el pago ya sea al proveedor o colaborador, a inicios de mes para que se pueda comprobar dicho depósito dentro del mismo mes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-100 text-xs text-center font-bold text-salevale-blue border border-slate-300">
+                    NOTA: En ambos casos la factura debe venir a nombre de SAVAPRE SA DE CV.
+                </div>
+
+                <!-- Advertencia de Reintegro de Recursos -->
+                <div class="p-5 rounded-2xl bg-red-50 border-2 border-red-500 text-red-900 space-y-2">
+                    <div class="flex items-center gap-2 font-extrabold text-sm text-red-700">
+                        <i class="fa-solid fa-triangle-exclamation text-base"></i>
+                        <span>COMPROBACIÓN ESTRICTA DEL RECURSO:</span>
+                    </div>
+                    <p class="text-xs leading-relaxed font-medium">
+                        Es de suma importancia recalcar que si la Factura es contra Pago, se realizará el depósito al Colaborador a inicios del mes para que genere los pagos pertinentes y compruebe con facturas el monto depositado dentro del mes, <strong>de lo contrario se solicitará el reintegro del recurso</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN DESCRIPCIÓN DE PROCESOS (FLUJO LINEAL HORIZONTAL REQUERIDO) -->
+        <section id="procesos" class="scroll-mt-24 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-salevale-blue pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                        <i class="fa-solid fa-diagram-project text-salevale-lightGreen"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-extrabold text-salevale-blue">DESCRIPCIÓN DE PROCESOS</h2>
+                        <p class="text-xs text-slate-500 uppercase tracking-wider">Flujo Secuencial en Fases (Arriba Actividad · Abajo Descripción)</p>
+                    </div>
+                </div>
+                <div class="inline-flex items-center gap-2 text-xs font-bold text-salevale-blue bg-blue-50 px-3 py-1.5 rounded-full border border-blue-200">
+                    <i class="fa-solid fa-arrows-left-right text-salevale-green"></i>
+                    <span>Desplazamiento horizontal</span>
+                </div>
+            </div>
+
+            <!-- CONTENEDOR DEL FLUJO LINEAL HORIZONTAL -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 overflow-hidden">
+                <p class="text-xs text-slate-500 mb-6">Secuencia lineal obligatoria para la planeación y desarrollo de las posadas 2026:</p>
+                
+                <div class="overflow-x-auto pb-6 pt-2 custom-scrollbar timeline-scroll">
+                    <div class="inline-flex space-x-6 min-w-max px-2">
+
+                        <!-- FASE 1 -->
+                        <div class="w-80 bg-slate-50 rounded-2xl border-t-4 border-salevale-blue border-x border-b border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase">Fase 1</span>
+                                    <i class="fa-solid fa-paper-plane text-salevale-blue"></i>
+                                </div>
+                                <h3 class="text-sm font-extrabold text-slate-900 leading-snug">
+                                    1. Envío de información (Fotos y Cotización) al área de Marketing para su Validación o comentarios
+                                </h3>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <p><strong>Descripción:</strong> Se deberá mandar por Correo al área de MKT al correo <a href="mailto:perla.uriarte@salevale.com" class="text-salevale-blue font-bold underline">perla.uriarte@salevale.com</a> (CC: Compras a los correos <a href="mailto:javier.angulo@salevale.com" class="text-salevale-blue font-bold underline">javier.angulo@salevale.com</a> y <a href="mailto:andrea.mejia@salevale.com" class="text-salevale-blue font-bold underline">andrea.mejia@salevale.com</a>), el presupuesto y fotos del local en donde se desarrollarán para su validación.</p>
+                            </div>
+                        </div>
+
+                        <!-- Flecha -->
+                        <div class="flex items-center text-slate-300">
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                        </div>
+
+                        <!-- FASE 2 -->
+                        <div class="w-80 bg-slate-50 rounded-2xl border-t-4 border-salevale-blue border-x border-b border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase">Fase 2</span>
+                                    <i class="fa-solid fa-shield-check text-salevale-blue"></i>
+                                </div>
+                                <h3 class="text-sm font-extrabold text-slate-900 leading-snug">
+                                    2. Validación de Proveedor (En caso de que aplique)
+                                </h3>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <p><strong>Descripción:</strong> Siempre y cuando por el monto y categoría se requiera, los documentos del proveedor pasarán por un proceso de validación con el área de Control de Proveedores de Grupo Coppel.</p>
+                            </div>
+                        </div>
+
+                        <!-- Flecha -->
+                        <div class="flex items-center text-slate-300">
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                        </div>
+
+                        <!-- FASE 3 -->
+                        <div class="w-80 bg-slate-50 rounded-2xl border-t-4 border-salevale-blue border-x border-b border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase">Fase 3</span>
+                                    <i class="fa-solid fa-building-circle-check text-salevale-blue"></i>
+                                </div>
+                                <h3 class="text-sm font-extrabold text-slate-900 leading-snug">
+                                    3. Alta de Proveedor en Contabilidad
+                                </h3>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <p><strong>Descripción:</strong> Validado el proveedor se procederá con el Alta en contabilidad de SaleVale, para el depósito directo a proveedor.</p>
+                                <p class="text-[11px] text-amber-700 font-semibold bg-amber-50 p-1.5 rounded">Nota: En caso de montos menores a $30,000 se puede dar de alta a proveedores bajo la Decisión 14-B.</p>
+                            </div>
+                        </div>
+
+                        <!-- Flecha -->
+                        <div class="flex items-center text-slate-300">
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                        </div>
+
+                        <!-- FASE 4 -->
+                        <div class="w-80 bg-slate-50 rounded-2xl border-t-4 border-salevale-blue border-x border-b border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase">Fase 4</span>
+                                    <i class="fa-solid fa-file-contract text-salevale-blue"></i>
+                                </div>
+                                <h3 class="text-sm font-extrabold text-slate-900 leading-snug">
+                                    4. Formalización del Servicio (Contrato)
+                                </h3>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-1.5">
+                                <p><strong>Descripción:</strong> Para proveedores que el monto sea mayor a $30,000.00 se gestionarán 2 tipos de contratos:</p>
+                                <p class="text-[11px] font-semibold text-salevale-blue">• De 30 a 50 mil: Contrato Simple (Firma Autógrafa respaldado por cotización)</p>
+                                <p class="text-[11px] font-semibold text-salevale-blue">• De 50 mil en adelante: Contrato Marco Coppel (Firma Digital)</p>
+                            </div>
+                        </div>
+
+                        <!-- Flecha -->
+                        <div class="flex items-center text-slate-300">
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                        </div>
+
+                        <!-- FASE 5 -->
+                        <div class="w-80 bg-slate-50 rounded-2xl border-t-4 border-salevale-blue border-x border-b border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase">Fase 5</span>
+                                    <i class="fa-solid fa-money-bill-transfer text-salevale-blue"></i>
+                                </div>
+                                <h3 class="text-sm font-extrabold text-slate-900 leading-snug">
+                                    5. Pago del Servicio o Depósito a Colaborador
+                                </h3>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <p><strong>Descripción:</strong> Con el contrato firmado se procederá a realizar los pagos de anticipo o completos de los eventos. En el caso de Eventos Pequeños y Micro se realizará depósitos a colaboradores y posteriormente su comprobación.</p>
+                            </div>
+                        </div>
+
+                        <!-- Flecha -->
+                        <div class="flex items-center text-slate-300">
+                            <i class="fa-solid fa-arrow-right text-xl"></i>
+                        </div>
+
+                        <!-- FASE 6 -->
+                        <div class="w-80 bg-gradient-to-b from-green-50 to-white rounded-2xl border-t-4 border-salevale-green border-x border-b border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="px-2.5 py-1 bg-green-100 text-salevale-green font-extrabold text-[10px] rounded-full uppercase">Fase 6</span>
+                                    <i class="fa-solid fa-receipt text-salevale-green"></i>
+                                </div>
+                                <h3 class="text-sm font-extrabold text-slate-900 leading-snug">
+                                    6. Comprobación del Gasto (en caso de Anticipos)
+                                </h3>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <p><strong>Descripción:</strong> En caso de los Depósitos de anticipo a proveedores o colaboradores, se realizarán a inicios de mes para que se comprueben dentro del mismo mes.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN DOCUMENTACIÓN -->
+        <section id="documentacion" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
+                <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-folder-open text-salevale-lightGreen"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-salevale-blue">DOCUMENTACIÓN</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider">Requisitos para Personas Físicas, Personas Morales y Cotizaciones</p>
+                </div>
+            </div>
+
+            <!-- Vigencia de Documentos -->
+            <div class="p-4 rounded-xl bg-amber-50 border-l-4 border-amber-500 text-amber-900 text-xs sm:text-sm font-medium flex items-center gap-3">
+                <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xl"></i>
+                <span><strong>REGLA DE VIGENCIA:</strong> Los documentos deben ser lo más reciente posible y <strong>NO MAYOR A DOS MESES</strong> del mes actual. De preferencia legibles en PDF para evitar rechazos.</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Personas Físicas -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-100 text-salevale-blue flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="font-extrabold text-salevale-blue text-base">Personas Físicas</h3>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Identificación Oficial Vigente</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Constancia de Situación Fiscal (CSF)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Comprobante de Domicilio (a nombre del proveedor - Si es renta de inmueble compartir contrato de arrendamiento o carta de justificación)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Carátula Bancaria con Número de Cuenta y CLABE Interbancaria (a nombre del Proveedor)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Correo de Contacto</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Personas Morales -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-100 text-salevale-blue flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="font-extrabold text-salevale-blue text-base">Personas Morales</h3>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Acta Constitutiva</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Poder del Representante Legal</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Identificación Oficial del Representante Legal</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Correo del Representante Legal</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Constancia de Situación Fiscal (CSF)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Comprobante de Domicilio (con contrato de arrendamiento si es renta)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-salevale-green mt-0.5"></i>
+                            <span>Carátula Bancaria con Número de Cuenta y CLABE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Requisitos de la Cotización -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <div class="w-8 h-8 rounded-lg bg-green-100 text-salevale-green flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="font-extrabold text-salevale-blue text-base">Datos de la Cotización</h3>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-2.5">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-salevale-blue mt-1"></i>
+                            <span>Hoja membretada del local o proveedor (con información del proveedor)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-salevale-blue mt-1"></i>
+                            <span>A nombre de <strong>SAVAPRE SA DE CV</strong> o SaleVale</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-salevale-blue mt-1"></i>
+                            <span>Fecha del evento y horario</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-salevale-blue mt-1"></i>
+                            <span>Descripción de los servicios (de preferencia listado con costos unitarios)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-salevale-blue mt-1"></i>
+                            <span>Desglose de importes (Subtotal, Impuestos, Total)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-dot text-salevale-blue mt-1"></i>
+                            <span>Términos y condiciones de pago y cancelaciones</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. SECCIÓN CONTACTOS -->
+        <section id="contactos" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-salevale-blue pb-3">
+                <div class="w-10 h-10 rounded-xl bg-salevale-blue text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-address-book text-salevale-lightGreen"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-salevale-blue">CONTACTOS</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider">Directorio Oficial para la Gestión de las Posadas 2026</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Mercadotecnia -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-salevale-green border-x border-b border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="px-2.5 py-1 bg-green-100 text-salevale-green font-extrabold text-[10px] rounded-full uppercase tracking-wider">Mercadotecnia</span>
+                        <h3 class="text-lg font-extrabold text-salevale-blue mt-2">Perla Uriarte</h3>
+                        <p class="text-xs text-slate-500 mt-1">Validación de lugares, presupuestos, amenidades y dinámicas del evento.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 space-y-2">
+                        <a href="mailto:perla.uriarte@salevale.com" class="inline-flex items-center gap-2 text-xs font-bold text-salevale-blue hover:text-salevale-green transition-colors">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>perla.uriarte@salevale.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Compras y Contratos -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-salevale-blue border-x border-b border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase tracking-wider">Compras & Contratos</span>
+                        <h3 class="text-lg font-extrabold text-salevale-blue mt-2">Javier Arnoldo Angulo</h3>
+                        <p class="text-xs text-slate-500 mt-1">Recepción en copia de cotizaciones, proceso de alta de proveedores y contratos marco/simples.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 space-y-2">
+                        <a href="mailto:javier.angulo@salevale.com" class="inline-flex items-center gap-2 text-xs font-bold text-salevale-blue hover:text-salevale-green transition-colors">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>javier.angulo@salevale.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Compras y Gestión de Recursos -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-salevale-blue border-x border-b border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="px-2.5 py-1 bg-blue-100 text-salevale-blue font-extrabold text-[10px] rounded-full uppercase tracking-wider">Compras & Gestión de Recursos</span>
+                        <h3 class="text-lg font-extrabold text-salevale-blue mt-2">Andrea Mejía</h3>
+                        <p class="text-xs text-slate-500 mt-1">Recepción en copia de cotizaciones, seguimiento de estatus de proveedores, pagos, anticipos y comprobaciones.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 space-y-2">
+                        <a href="mailto:andrea.mejia@salevale.com" class="inline-flex items-center gap-2 text-xs font-bold text-salevale-blue hover:text-salevale-green transition-colors">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>andrea.mejia@salevale.com</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER CORPORATIVO -->
+    <footer class="bg-salevale-darkBlue text-white mt-16 border-t-4 border-salevale-green py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+                <span class="text-white font-extrabold text-sm">Sale<span class="text-salevale-green">vale</span></span>
+                <span>| SAVAPRE S.A. de C.V. © 2026</span>
+            </div>
+            <p class="text-center">Portal Informativo Oficial para Gerentes · Temporada Posadas Noviembre / Diciembre 2026</p>
+            <a href="#inicio" class="text-salevale-lightGreen hover:underline font-bold">Volver Arriba ↑</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT INTERACTIVO: FILTRADO DE SUCURSALES Y EVENTOS -->
+    <script>
+        // Listado Oficial de 59 Sucursales por Categoría
+        const branches = [
+            // MACRO (7)
+            { name: "Celaya", category: "Macro", note: "Celaya / Irapuato / Qro / San Juan" },
+            { name: "Villahermosa", category: "Macro", note: "Villahermosa / Comalcalco / Macuspana" },
+            { name: "Culiacán", category: "Macro", note: "Culiacán I y II" },
+            { name: "Uruapan", category: "Macro", note: "Morelia / Pátzcuaro / Uruapan" },
+            { name: "Minatitlán", category: "Macro", note: "Acayucan / Coatzacoalcos / Minatitlán" },
+            { name: "Torreón", category: "Macro", note: "Torreón / San Pedro / Matamoros / Gómez Palacio" },
+            { name: "Los Mochis", category: "Macro", note: "Guamúchil / Guasave / Los Mochis" },
+
+            // MEDIANAS (18)
+            { name: "Durango", category: "Mediana", note: "Evento Mediano" },
+            { name: "Tepic", category: "Mediana", note: "Evento Mediano" },
+            { name: "Mazatlan", category: "Mediana", note: "Evento Mediano" },
+            { name: "Saltillo", category: "Mediana", note: "Evento Mediano" },
+            { name: "Obregón", category: "Mediana", note: "Evento Mediano" },
+            { name: "Matamoros Tam", category: "Mediana", note: "Evento Mediano" },
+            { name: "Cabo San Lucas", category: "Mediana", note: "Evento Mediano" },
+            { name: "San Jose del Cabo", category: "Mediana", note: "Evento Mediano" },
+            { name: "Tampico (Suc altamira, Madero y Tampico)", category: "Mediana", note: "Evento Mediano" },
+            { name: "La Paz", category: "Mediana", note: "Evento Mediano" },
+            { name: "Tuxpan", category: "Mediana", note: "Evento Mediano" },
+            { name: "Poza Rica", category: "Mediana", note: "Evento Mediano" },
+            { name: "Camargo", category: "Mediana", note: "Evento Mediano" },
+            { name: "Chihuahua", category: "Mediana", note: "Evento Mediano" },
+            { name: "Delicias", category: "Mediana", note: "Evento Mediano" },
+            { name: "Parral", category: "Mediana", note: "Evento Mediano" },
+            { name: "Zacatecas (Suc Calera, Guadalupe, Zacatecas)", category: "Mediana", note: "Evento Mediano" },
+            { name: "Hermosillo", category: "Mediana", note: "Evento Mediano" },
+
+            // PEQUEÑAS (22)
+            { name: "Nogales", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Sombrerete", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Casas Grandes", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Ensenada", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Zamora", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Xalapa", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Tecate", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Guadalupe Nuevo Leon", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Aguascalientes", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Tijuana", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Juarez", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Cordoba", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Orizaba", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Veracruz", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Silao", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Jerez", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Fresnillo", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Lacruz", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "El Fuerte", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Tapachula", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Tuxtla Gutierrez", category: "Pequeña", note: "Evento Pequeño" },
+            { name: "Salina Cruz", category: "Pequeña", note: "Evento Pequeño" },
+
+            // MICRO (12)
+            { name: "Oaxaca", category: "Micro", note: "Evento Micro" },
+            { name: "Merida", category: "Micro", note: "Evento Micro" },
+            { name: "Cancun", category: "Micro", note: "Evento Micro" },
+            { name: "Tonala Chiapas", category: "Micro", note: "Evento Micro" },
+            { name: "Juchitan", category: "Micro", note: "Evento Micro" },
+            { name: "Zapopan", category: "Micro", note: "Evento Micro" },
+            { name: "Tuxtepec", category: "Micro", note: "Evento Micro" },
+            { name: "Zitacuaro", category: "Micro", note: "Evento Micro" }
+        ];
+
+        let activeCategory = 'ALL';
+
+        function renderBranches() {
+            const container = document.getElementById('branchesContainer');
+            const searchVal = document.getElementById('sucursalSearchInput').value.toLowerCase().trim();
+            container.innerHTML = '';
+
+            const filtered = branches.filter(b => {
+                const matchCategory = activeCategory === 'ALL' || b.category === activeCategory;
+                const matchSearch = b.name.toLowerCase().includes(searchVal) || b.note.toLowerCase().includes(searchVal);
+                return matchCategory && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="col-span-full py-8 text-center text-xs text-slate-400">No se encontraron sucursales coincidentes.</div>`;
+                return;
+            }
+
+            filtered.forEach(b => {
+                let badgeClass = 'bg-slate-100 text-slate-700';
+                if(b.category === 'Macro') badgeClass = 'bg-amber-100 text-amber-800 border-amber-300';
+                if(b.category === 'Mediana') badgeClass = 'bg-blue-100 text-salevale-blue border-blue-300';
+                if(b.category === 'Pequeña') badgeClass = 'bg-green-100 text-salevale-green border-green-300';
+                if(b.category === 'Micro') badgeClass = 'bg-purple-100 text-purple-800 border-purple-300';
+
+                const card = document.createElement('div');
+                card.className = 'p-3 bg-slate-50 hover:bg-white rounded-xl border border-slate-200 hover:border-salevale-blue transition-all flex flex-col justify-between';
+                card.innerHTML = `
+                    <div class="flex items-start justify-between gap-2 mb-1">
+                        <h4 class="font-extrabold text-xs text-slate-800">${b.name}</h4>
+                        <span class="text-[9px] font-extrabold px-2 py-0.5 rounded-full border uppercase ${badgeClass}">${b.category}</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400">${b.note}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterBranches() {
+            renderBranches();
+        }
+
+        function setCategoryFilter(category) {
+            activeCategory = category;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = 'category-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-salevale-blue text-white shadow-sm';
+                } else {
+                    btn.className = 'category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200';
+                }
+            });
+            renderBranches();
+        }
+
+        // Manejo Menú Móvil
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        window.onload = function() {
+            renderBranches();
+        };
+    </script>
+</body>
+</html>
