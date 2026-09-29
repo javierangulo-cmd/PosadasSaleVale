@@ -207,11 +207,11 @@
                 </div>
             </div>
 
-            <!-- Directorio Interactivo de las 59 Sucursales -->
+            <!-- Directorio Interactivo de las Sucursales -->
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <h3 class="text-xl font-bold text-salevale-blue">Directorio General de Sucursales (59 Sedes)</h3>
+                        <h3 class="text-xl font-bold text-salevale-blue">Directorio General de Sucursales</h3>
                         <p class="text-xs text-slate-500">Verifica la clasificación correspondiente a tu sucursal para la temporada 2026.</p>
                     </div>
                     <!-- Buscador -->
@@ -223,9 +223,9 @@
 
                 <!-- Tabs de Categoría -->
                 <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
-                    <button onclick="setCategoryFilter('ALL')" class="category-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-salevale-blue text-white shadow-sm" data-category="ALL">Todas (59)</button>
+                    <button onclick="setCategoryFilter('ALL')" class="category-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-salevale-blue text-white shadow-sm" data-category="ALL">Todas</button>
                     <button onclick="setCategoryFilter('Macro')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Macro">Macro (7)</button>
-                    <button onclick="setCategoryFilter('Mediana')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Mediana">Medianas (18)</button>
+                    <button onclick="setCategoryFilter('Mediana')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Mediana">Medianas (19)</button>
                     <button onclick="setCategoryFilter('Pequeña')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Pequeña">Pequeñas (22)</button>
                     <button onclick="setCategoryFilter('Micro')" class="category-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" data-category="Micro">Micro (12)</button>
                 </div>
@@ -447,7 +447,7 @@
             </div>
         </section>
 
-        <!-- 5. SECCIÓN DESCRIPCIÓN DE PROCESOS (FLUJO LINEAL HORIZONTAL REQUERIDO) -->
+        <!-- 5. SECCIÓN DESCRIPCIÓN DE PROCESOS -->
         <section id="procesos" class="scroll-mt-24 space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-salevale-blue pb-3">
                 <div class="flex items-center gap-3">
@@ -1043,7 +1043,7 @@
 
     <!-- SCRIPT INTERACTIVO: FILTRADO DE SUCURSALES Y EVENTOS -->
     <script>
-        // Listado Oficial de 59 Sucursales por Categoría
+        // Listado Oficial de Sucursales por Categoría
         const branches = [
             // MACRO (7)
             { name: "Celaya", category: "Macro", note: "Celaya / Irapuato / Qro / San Juan" },
@@ -1054,7 +1054,7 @@
             { name: "Torreón", category: "Macro", note: "Torreón / San Pedro / Matamoros / Gómez Palacio" },
             { name: "Los Mochis", category: "Macro", note: "Guamúchil / Guasave / Los Mochis" },
 
-            // MEDIANAS (18)
+            // MEDIANAS (19)
             { name: "Durango", category: "Mediana", note: "Evento Mediano" },
             { name: "Tepic", category: "Mediana", note: "Evento Mediano" },
             { name: "Mazatlan", category: "Mediana", note: "Evento Mediano" },
@@ -1073,6 +1073,7 @@
             { name: "Parral", category: "Mediana", note: "Evento Mediano" },
             { name: "Zacatecas (Suc Calera, Guadalupe, Zacatecas)", category: "Mediana", note: "Evento Mediano" },
             { name: "Hermosillo", category: "Mediana", note: "Evento Mediano" },
+            { name: "Vallarta", category: "Mediana", note: "Evento Mediano" },
 
             // PEQUEÑAS (22)
             { name: "Nogales", category: "Pequeña", note: "Evento Pequeño" },
